@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
 
+
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+import style from './assets/css/style.css'
 import App from './App.vue'
 import routes from './routes.js'
 import VueRouter from 'vue-router'
@@ -26,5 +28,6 @@ new Vue({
     lodash,
     router,
     axios,
+    style,
     render: h => h(App),
 }).$mount('#app')

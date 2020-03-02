@@ -1,0 +1,119 @@
+body {
+    font-family: "Roboto", serif;
+    padding: 0;
+    margin: 0;
+    background: #181718;
+    font-size: 14px;
+    text-align: left !important;
+    overflow-x: hidden;
+}
+
+
+/* methods: {
+    getMovies(){
+      axios.
+      get('https://api.themoviedb.org/3/movie/popular?api_key=28741ec72a0631da6ac9fa8e406a43ae')
+      .then((response) =>{
+        return response.json()
+      })
+      .then((jsonData) =>{
+        this.movies = jsonData.results
+        console.log(this.movies)
+      })
+      .catch((error) =>{
+        console.log(error)
+      })
+    }
+  } */
+
+
+/* helper classes */
+
+.space-20 {
+    height: 20px;
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    color: #fdfdf8;
+}
+
+a:hover {
+    outline: none;
+    text-decoration: none;
+}
+
+p {
+    color: #666666;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.929;
+    font-size: 16px;
+    margin-bottom: 0px;
+    color: #888888;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 1.2em !important;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 28px;
+    color: #242429;
+    font-weight: 600;
+    line-height: 1.222;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 25px;
+}
+
+h5 {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a:focus,
+.button:focus,
+button:focus,
+.btn:focus,
+button:active,
+.btn:active,
+.btn:active:focus {
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.relative {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.overlay-bg {
+    background: rgba(0, 0, 0, 0.55);
+}
