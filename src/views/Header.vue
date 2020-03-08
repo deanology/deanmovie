@@ -2,7 +2,7 @@
   <div>
     <b-navbar toggleable="lg" type="dark" class="justify-content-end">
       <b-container>
-        <b-navbar-brand to="/">Movies</b-navbar-brand>
+        <b-navbar-brand to="/"><i class="fas fa-facebook"></i></b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -17,7 +17,7 @@
             </b-nav-item>
           </b-navbar-nav>
           <b-navbar-nav class="ml-auto">
-              <b-nav-form>
+              <b-nav-form v-on:submit="sortedResult">
                   <b-form-input size="md" class="mx-0 mx-lg-1 px-0 px-lg-2" placeholder="Search"></b-form-input>
                   <b-button size="md" class="mx-0 mx-lg-1 px-0 px-lg-2 search-btn" type="submit">Search</b-button>
               </b-nav-form>
@@ -29,7 +29,30 @@
   </div>
 </template>
 <script>
-export default {};
+// importing axios for async REST calls
+// import axios from 'axios'
+export default {
+  name: "header",
+  props: {
+    movies: Array
+  },
+  data(){
+    return{
+      sortedResult: []
+    }
+  },
+  mounted(){
+
+  },
+  methods: {
+    searchText(){
+      this.sortedResult = this.movies.filter(
+        
+      )
+      return this.sortedResult;
+    }
+  }
+};
 </script>
 <style scoped>
   .navbar{

@@ -6,7 +6,7 @@
         <router-link to="/login">Login</router-link>
     </b-nav>
     <router-view/> -->
-     <Header/>
+     <Header v-bind:movies="movies"/>
   </div>
 </template>
 

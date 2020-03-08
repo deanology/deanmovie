@@ -2,90 +2,15 @@
   <div>
     <section class="display-movie padding">
       <b-container>
-        <b-row v-for="movie in movies" :key="movie.id">
-          <b-col class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-5 mb-lg-0 mt-3">
-            <img src="../assets/img/got.jpg" alt="Image" />
-            <div class="article-body">
-              <div class="title">
-                <h5>Jurassic World: Fallen Kingdom</h5>
-              </div>
-              <div class="text">
-                <p>Some quick example text to build on the card title and make up the bulk of the card's content</p>
-              </div>
-              <div class="links">
-                <b-button href="#" variant="success" size="sm" class="mr-1 trailer-btn">Trailer</b-button>
-                <b-button href="#" variant="success" size="sm" class="details-btn">Details</b-button>
-              </div>
-            </div>
-          </b-col>
-          <b-col class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-5 mb-lg-0 mt-3">
-            <img src="../assets/img/got.jpg" alt="Image" />
+        <b-row>
+          <b-col class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-5 mb-lg-0 mt-3" v-for="movie in movies" :key="movie.id">
+            <img :src="movie.poster_path" alt="Image" />
             <div class="article-body">
               <div class="title">
                 <h5><a href="#">{{ movie.title }}</a></h5>
               </div>
               <div class="text">
-                <p>{{ movie.overview}}</p>
-              </div>
-              <div class="links">
-                <b-button href="#" variant="success" size="sm" class="mr-1 trailer-btn">Trailer</b-button>
-                <b-button href="#" variant="success" size="sm" class="details-btn">Details</b-button>
-              </div>
-            </div>
-          </b-col>
-          <b-col class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-5 mb-lg-0 mt-3">
-            <img src="../assets/img/got.jpg" alt="Image" />
-            <div class="article-body">
-              <div class="title">
-                <h5>Jurassic World: Fallen Kingdom</h5>
-              </div>
-              <div class="text">
-                <p>Some quick example text to build on the card title and make up the bulk of the card's content</p>
-              </div>
-              <div class="links">
-                <b-button href="#" variant="success" size="sm" class="mr-1 trailer-btn">Trailer</b-button>
-                <b-button href="#" variant="success" size="sm" class="details-btn">Details</b-button>
-              </div>
-            </div>
-          </b-col>
-          <b-col class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-5 mb-lg-0 mt-3">
-            <img src="../assets/img/got.jpg" alt="Image" />
-            <div class="article-body">
-              <div class="title">
-                <h5>Jurassic World: Fallen Kingdom</h5>
-              </div>
-              <div class="text">
-                <p>Some quick example text to build on the card title and make up the bulk of the card's content</p>
-              </div>
-              <div class="links">
-                <b-button href="#" variant="success" size="sm" class="mr-1 trailer-btn">Trailer</b-button>
-                <b-button href="#" variant="success" size="sm" class="details-btn">Details</b-button>
-              </div>
-            </div>
-          </b-col>
-          <b-col class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-5 mb-lg-0 mt-3">
-            <img src="../assets/img/got.jpg" alt="Image" />
-            <div class="article-body">
-              <div class="title">
-                <h5>Jurassic World: Fallen Kingdom</h5>
-              </div>
-              <div class="text">
-                <p>Some quick example text to build on the card title and make up the bulk of the card's content</p>
-              </div>
-              <div class="links">
-                <b-button href="#" variant="success" size="sm" class="mr-1 trailer-btn">Trailer</b-button>
-                <b-button href="#" variant="success" size="sm" class="details-btn">Details</b-button>
-              </div>
-            </div>
-          </b-col>
-          <b-col class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-5 mb-lg-0 mt-3">
-            <img src="../assets/img/got.jpg" alt="Image" />
-            <div class="article-body">
-              <div class="title">
-                <h5>Jurassic World: Fallen Kingdom</h5>
-              </div>
-              <div class="text">
-                <p>Some quick example text to build on the card title and make up the bulk of the card's content</p>
+                <p class="movie-overview">{{ movie.overview}}</p>
               </div>
               <div class="links">
                 <b-button href="#" variant="success" size="sm" class="mr-1 trailer-btn">Trailer</b-button>
@@ -94,8 +19,6 @@
             </div>
           </b-col>
         </b-row>
-        <!-- <b-row>             
-        </b-row> -->
       </b-container>
     </section>
   </div>
@@ -136,6 +59,14 @@ export default {
 .details-btn {
   background-color: #017cff;
   border-color: #017cff;
+}
+.text .movie-overview{
+  max-width: 400px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
 }
 .text {
   margin-bottom: 10px;
